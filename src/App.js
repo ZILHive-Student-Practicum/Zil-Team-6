@@ -2,17 +2,9 @@ import Governance from "./pages/Governance";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import React from "react";
-import TradePair from "./pages/TradePair";
+import { ZilPayContextProvider } from "./components/ZilPayContext";
 import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const { Zilliqa } = require('@zilliqa-js/zilliqa');
-const { BN, Long, units } = require('@zilliqa-js/util');
-
-const {
-  StatusType,
-  MessageType,
-} = require('@zilliqa-js/subscriptions');
 
 const router = createBrowserRouter([
   {
@@ -27,23 +19,16 @@ const router = createBrowserRouter([
         path: "governance/",
         element: <Governance />
       },
-      {
-        path: "trade/buy/",
-        element: <TradePair />
-      },
-      {
-        path: "trade/sell/",
-        element: <TradePair />
-      }
     ]
   },
-  
 ])
 
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <ZilPayContextProvider>
+        <RouterProvider router={router} />
+      </ZilPayContextProvider>
     </div>
   );
 }
