@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "@zilliqa-js/zilliqa": "^3.3.4",
     "framer-motion": "^8.0.2",
     "next": "^13.1.1",
     "react": "^18.2.0",
