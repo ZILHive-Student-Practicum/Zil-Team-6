@@ -26,6 +26,7 @@ import {
     SunIcon
     } from '@chakra-ui/icons';
 import { Link as ReachLink } from "react-router-dom"; 
+import Consumer from "./ZilPayContext";
 
 const NAV_ITEMS = [
     {
@@ -95,15 +96,20 @@ export default function AppBar() {
                 <Button onClick={toggleColorMode}>
                     {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                 </Button>
-                <Button
-                    as={'a'}
-                    fontSize={'sm'}
-                    fontWeight={400}
-                    variant={'outline'}
-                    href={'#'}
-                    rightIcon={<ChevronRightIcon />}>
-                    Connect Wallet
-                </Button>
+                <Consumer>
+                    {
+                        ctx => <Button
+                            as={'a'}
+                            fontSize={'sm'}
+                            fontWeight={400}
+                            variant={'outline'}
+                            onClick={ctx.connectZilPay}
+                            rightIcon={<ChevronRightIcon />}>
+                            {ctx.isLoggedIn ? "Connected!" : "Connect Wallet"}
+                            </Button>
+                    }
+                    
+                </Consumer>
                 </Stack>
             </Flex>
 
@@ -151,21 +157,21 @@ const MobileNav = ({theme, menuToggle}) => {
         p={4}
         display={{ md: 'none' }}>
         {NAV_ITEMS.map((navItem) => (
-            <MobileNavItem label={navItem.label} href={navItem.href} theme={theme} 
+            <MobileNavItem key={navItem.label} navItem={navItem} theme={theme} 
             menuToggle={menuToggle}/>
         ))}
         </Stack>
     );
 };
 
-const MobileNavItem = ({ label, href, theme, menuToggle }) => {
+const MobileNavItem = ({ navItem, theme, menuToggle }) => {
 
     return (
         <Flex
             py={2}
             px={2}
             as={ReachLink}
-            to={href ?? '#'}
+            to={navItem.href ?? '#'}
             justify={'space-between'}
             align={'center'}
             onClick={menuToggle}
@@ -176,7 +182,7 @@ const MobileNavItem = ({ label, href, theme, menuToggle }) => {
             }}>
             <Text
             fontWeight={600}>
-            {label}
+            {navItem.label}
             </Text>
         </Flex>
     );
