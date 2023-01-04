@@ -1,10 +1,6 @@
 import React, {useState} from "react";
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Card, Heading } from '@chakra-ui/react';
-import {
-    FormControl,
-    FormLabel
-} from '@chakra-ui/react';
 
 {/* <Button colorScheme='blue' variant='outline' style={btn}>
     Create Poll
@@ -16,19 +12,6 @@ const btn ={
 }
 
 const GovernForm = () => {
-//     const showForm = () => {
-//       <form>
-//         <Center>
-//           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-//             Verify your Email
-//           </Heading>
-//         </Center>
-//       </form>
-//     }
-  
-//     return <Button colorScheme='blue' variant='outline' style={btn} onClick={showForm}>Show alert</Button>;
-//   }
-
     const[showForm, setShowForm] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -45,13 +28,18 @@ const GovernForm = () => {
                             <fieldset>
                             <label>
                                 <p>Title</p>
-                                <input type="text" />
+                                <input type="text" size="45"/>
+                            </label>
+                            <label>
                                 <p>Description</p>
-                                <input type="text" />
+                                <textarea cols="47"/>
+                            </label>
+                            <label>
                                 <p>Information Link (optional) </p>
-                                <input type="text" />
+                                <input type="text" placeholder="URL for additional information" size="45"/>
                             </label>
                             </fieldset>
+                            <br></br>
                             <Button type="submit">Submit</Button>
                         </form>
                         </div>
