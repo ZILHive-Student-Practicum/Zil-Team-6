@@ -7,7 +7,7 @@ const cardStyle = {
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    boxShadow: '1px 2px 9px #FFFFFF',
+    boxShadow: '1px 2px 9px #88f797',
 }
 
 export default function PollCard({
