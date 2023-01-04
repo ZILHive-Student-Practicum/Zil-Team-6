@@ -16,12 +16,12 @@ export default function StakeCard() {
     return(
         <SimpleGrid minChildWidth='120px' spacing='30px'>
             <Box>
-                <Card height='160px'>
+                <Card height='190px'>
                     <CardHeader>
                         <Heading size='md'>ZilTeam6</Heading>
                     </CardHeader>
                     <CardBody>
-                        <SimpleGrid minChildWidth='50px'>
+                        <SimpleGrid minChildWidth='150px'>
                             <Text as='sub'>
                                 Community Pool {''}
                                 <Tooltip label='Total number of tokens currently in the community pool'>
@@ -46,7 +46,7 @@ export default function StakeCard() {
             </Box>
             
             <Box>
-                <Card height='160px'>
+                <Card height='190px'>
                     <CardBody>
                         <SimpleGrid minChildWidth='50px'>
                             <Text as='sub'>

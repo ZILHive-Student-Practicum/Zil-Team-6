@@ -1,16 +1,6 @@
 import React from "react";
 import { SimpleGrid, Button, Checkbox, Tooltip, Box, propNames} from '@chakra-ui/react'
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
-  } from '@chakra-ui/react'
-import { ChevronDownIcon, InfoOutlineIcon } from '@chakra-ui/icons'
+import { InfoOutlineIcon } from '@chakra-ui/icons'
 import PollCard from "../components/PollCard.js";
 import data from "../data/Polldata.js";
 
@@ -46,17 +36,6 @@ export default function Polls(props) {
                     <InfoOutlineIcon></InfoOutlineIcon>
                     </Tooltip>
                     </h1>
-                    {/* <Menu onChange={FilterChange}>
-                        <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={right}>
-                            All
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem>In Progress</MenuItem>
-                            <MenuItem>Passed</MenuItem>
-                            <MenuItem>Rejected</MenuItem>
-                            <MenuItem>Executed</MenuItem>
-                        </MenuList>
-                    </Menu> */}
 
                     <div className='filter' style={right}>
                         <select name='name' onChange={onFilterValueSelected}>

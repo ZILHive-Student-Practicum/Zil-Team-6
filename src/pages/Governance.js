@@ -22,6 +22,9 @@ export default function Governance() {
 
     function onFilterValueSelected(filterValue) {
         console.log(filterValue);
+        if (filterValue == "In Progress") {
+            
+        }
     }
 
     return (
