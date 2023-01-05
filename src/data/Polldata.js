@@ -27,19 +27,19 @@ const data = [
       id: 5,
       title: "five",
       description: "desc",
-      status: "Rejected",
+      status: "In progress",
     },
     {
       id: 6,
       title: "six",
       description: "desc",
-      status: "Rejected",
+      status: "In progress",
     },
     {
       id: 7,
       title: "seven",
       description: "desc",
-      status: "Rejected",
+      status: "In progress",
     },
   ];
   

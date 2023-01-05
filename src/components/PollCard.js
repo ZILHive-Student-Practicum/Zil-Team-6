@@ -7,7 +7,7 @@ const cardStyle = {
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    boxShadow: '1px 2px 9px #FFFFFF',
+    boxShadow: '1px 2px 9px #88f797',
 }
 
 export default function PollCard({
@@ -17,7 +17,7 @@ export default function PollCard({
   description = "desc",
   
 }) {
-  if (status === "In progress"){
+  // if (status === "In progress"){
     return (
       <Box>
       <Card padding="20px" style={cardStyle}>
@@ -51,40 +51,40 @@ export default function PollCard({
       </Card>
       </Box>
     );
-  }
+  // }
 
-  return (
-    <Box>
-    <Card padding="20px">
-      <Stack spacing="10">
-        <Flex justifyContent="space-between">
-          <Heading
-            as="h2"
-            fontWeight="bold"
-            fontSize="12px"
-            isTruncated
-          >
-            ID: {id}
-          </Heading>
+  // return (
+  //   <Box>
+  //   <Card padding="20px">
+  //     <Stack spacing="10">
+  //       <Flex justifyContent="space-between">
+  //         <Heading
+  //           as="h2"
+  //           fontWeight="bold"
+  //           fontSize="12px"
+  //           isTruncated
+  //         >
+  //           ID: {id}
+  //         </Heading>
 
-          <Badge colorScheme='red'>
-            <Text as="span">
-              {status}
-            </Text>
-          </Badge>
-        </Flex>
+  //         <Badge colorScheme='red'>
+  //           <Text as="span">
+  //             {status}
+  //           </Text>
+  //         </Badge>
+  //       </Flex>
 
-        <Flex fontSize="16px">
-            {title}
-        </Flex>
+  //       <Flex fontSize="16px">
+  //           {title}
+  //       </Flex>
 
-        <Flex justifyContent="space-between">
-          <Text as="span">
-            {description}
-          </Text>
-        </Flex>
-      </Stack>
-    </Card>
-    </Box>
-  );
+  //       <Flex justifyContent="space-between">
+  //         <Text as="span">
+  //           {description}
+  //         </Text>
+  //       </Flex>
+  //     </Stack>
+  //   </Card>
+  //   </Box>
+  // );
 }

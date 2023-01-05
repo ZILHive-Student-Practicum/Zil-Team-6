@@ -23,10 +23,10 @@ const headerBox ={
 
 export default function Polls(props) {
 
-    function onFilterValueSelected(event) {
-        console.log(event.target.value);
-        props.filterValueSelected(event.target.value)
-    }
+    // function onFilterValueSelected(event) {
+    //     console.log(event.target.value);
+    //     props.filterValueSelected(event.target.value)
+    // }
     return (
         <SimpleGrid >
             <Box style={headerBox}>
@@ -37,7 +37,7 @@ export default function Polls(props) {
                     </Tooltip>
                     </h1>
 
-                    <div className='filter' style={right}>
+                    {/* <div className='filter' style={right}>
                         <select name='name' onChange={onFilterValueSelected}>
                             <option value='All'>All</option>
                             <option value='In Progress'>In Progress</option>
@@ -46,7 +46,7 @@ export default function Polls(props) {
                             <option value='Executed'>Executed</option>
                         </select>
                     </div>
-                    <Checkbox style={right}>Hide voted polls</Checkbox>
+                    <Checkbox style={right}>Hide voted polls</Checkbox> */}
                 </header>
             </Box>
             

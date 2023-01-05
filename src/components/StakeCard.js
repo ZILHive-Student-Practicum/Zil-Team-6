@@ -6,6 +6,11 @@ import { InfoOutlineIcon } from '@chakra-ui/icons'
 import { Tooltip } from '@chakra-ui/react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 
+
+const header = {
+    fontWeight: 'bold',
+}
+
 const x = {
     marginTop: '20px',
     marginBottom: '20px',
@@ -18,7 +23,7 @@ export default function StakeCard() {
             <Box>
                 <Card height='190px'>
                     <CardHeader>
-                        <Heading size='md'>ZilTeam6</Heading>
+                        <header style={header} size='md'>ZilTeam6</header>
                     </CardHeader>
                     <CardBody>
                         <SimpleGrid minChildWidth='150px'>
