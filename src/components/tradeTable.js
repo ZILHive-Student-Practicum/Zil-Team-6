@@ -19,7 +19,7 @@ import {
 import TickerRow from "./tickerRow.js";
 import TradePair from "./tradePair.js";
 import { useState, useEffect } from "react";
-import { ASSETS } from "../constants/constants.js";
+import { ASSETS, ASSET_REFRESH_PERIOD } from "../constants/constants.js";
 import { getLatestPrice } from "../utils/oracle.js";
 import { utils } from "ethers";
 import moment from "moment";
@@ -39,9 +39,6 @@ export default function TradeTable() {
     updateSelectedToken(token);
     onOpen();
   };
-
-  // Update once every minute
-  const MINUTE_MS = 60000;
 
   useEffect(() => {
     const updateAllPrices = async () => {
@@ -66,7 +63,7 @@ export default function TradeTable() {
       console.log("Updated all prices: ", updatedAssetArr);
     };
     updateAllPrices();
-    const interval = setInterval(updateAllPrices, MINUTE_MS);
+    const interval = setInterval(updateAllPrices, ASSET_REFRESH_PERIOD);
 
     return () => clearInterval(interval);
   }, []);
@@ -83,7 +80,7 @@ export default function TradeTable() {
         <Thead>
           <Tr>
             <Th>Ticker</Th>
-            <Th>Oracle Price</Th>
+            <Th>Oracle Price (USD)</Th>
             <Th>Oracle Last Updated</Th>
             <Th isNumeric>Amount in Wallet</Th>
           </Tr>
