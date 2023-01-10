@@ -1,4 +1,4 @@
-import { providers, Contract, BigNumber } from "ethers";
+import { providers, Contract } from "ethers";
 
 const provider = new providers.JsonRpcProvider(
   `https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_API_KEY}`
