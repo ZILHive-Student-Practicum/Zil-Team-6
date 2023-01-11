@@ -16,7 +16,7 @@ function Modal({ setOpenModal }) {
             onClick={() => {
               setOpenModal(false);
             }}
-          >
+          >yarn start
             X
           </Button>
         </div>

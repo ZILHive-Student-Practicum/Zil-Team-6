@@ -46,7 +46,7 @@ export default function Governance() {
                                 setModalOpen(true);
                             }}
                         >
-                            Open
+                            Create Poll
                         </Button>
 
                         {modalOpen && <Modal setOpenModal={setModalOpen} />}
@@ -56,7 +56,7 @@ export default function Governance() {
 
             <StakeCard></StakeCard>
 
-            {/* <Polls filterValueSelected={onFilterValueSelected}></Polls>            */}
+            {/* <Polls filterValueSelected={onFilterValueSelected}></Polls>*/}
             <Polls></Polls>
 
         </Container>
