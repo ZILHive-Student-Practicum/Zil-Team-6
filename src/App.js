@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import React from "react";
 import { ZilPayContextProvider } from "./components/ZilPayContext";
-import './App.css';
+import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -17,11 +17,11 @@ const router = createBrowserRouter([
       },
       {
         path: "governance/",
-        element: <Governance />
+        element: <Governance />,
       },
-    ]
+    ],
   },
-])
+]);
 
 function App() {
   return (
