@@ -1,45 +1,24 @@
 const data = [
     {
       id: 1,
-      title: "one",
-      description: "desc",
+      title: "Chainlink Oracles integration into Mirror",
+      description: "Integration of Chainlink Price Feeds into Mirror Protocol",
       status: "In progress",
+      VoteinFavour: 60,
     },
     {
       id: 2,
       title: "two",
       description: "desc",
       status: "In progress",
+      VoteinFavour: 60,
     },
     {
       id: 3,
       title: "three",
       description: "desc",
       status: "In progress",
-    },
-    {
-      id: 4,
-      title: "four",
-      description: "desc",
-      status: "In progress",
-    },
-    {
-      id: 5,
-      title: "five",
-      description: "desc",
-      status: "In progress",
-    },
-    {
-      id: 6,
-      title: "six",
-      description: "desc",
-      status: "In progress",
-    },
-    {
-      id: 7,
-      title: "seven",
-      description: "desc",
-      status: "In progress",
+      VoteinFavour: 60,
     },
   ];
   
