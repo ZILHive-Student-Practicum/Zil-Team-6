@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 
 contract MyToken is ERC20, ERC20Permit, ERC20Votes {
-    constructor() ERC20("MyToken", "MTK") ERC20Permit("MyToken") {}
+    constructor() ERC20("PRISM Token", "PRISM") ERC20Permit("PRISM Token") {}
 
     // The functions below are overrides required by Solidity.
 
