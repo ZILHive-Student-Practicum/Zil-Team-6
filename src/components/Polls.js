@@ -36,17 +36,6 @@ export default function Polls(props) {
                     <InfoOutlineIcon></InfoOutlineIcon>
                     </Tooltip>
                     </h1>
-
-                    {/* <div className='filter' style={right}>
-                        <select name='name' onChange={onFilterValueSelected}>
-                            <option value='All'>All</option>
-                            <option value='In Progress'>In Progress</option>
-                            <option value='Passed'>Passed</option>
-                            <option value='Rejected'>Rejected</option>
-                            <option value='Executed'>Executed</option>
-                        </select>
-                    </div>
-                    <Checkbox style={right}>Hide voted polls</Checkbox> */}
                 </header>
             </Box>
             
@@ -58,6 +47,7 @@ export default function Polls(props) {
                     title={aPoll.title}
                     description={aPoll.description}
                     status={aPoll.status}
+                    voteinFavour={aPoll.voteinFavour}
                 />
                 ))}
             </SimpleGrid>

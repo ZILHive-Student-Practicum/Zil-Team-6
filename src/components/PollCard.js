@@ -16,11 +16,12 @@ export default function PollCard({
   status = "",
   title = "hello",
   description = "desc",
-  VoteinFavour = 60,
-}) {
+  voteinFavour = 10,
+}) 
+{
     return (
       <Box>
-      <Card padding="20px" style={cardStyle}>
+      <Card padding="20px" style={cardStyle} marginBottom="20px">
         <Stack spacing="10">
           <Flex justifyContent="space-between">
             <Heading
@@ -47,16 +48,16 @@ export default function PollCard({
               <Text fontSize='xs' color= 'grey'>{description}</Text>         
           </Stack>
           <ProgressBar>
-            <ProgressBar striped variant="success" now={VoteinFavour} label={`${VoteinFavour}% YES`}/>
+            <ProgressBar striped variant="success" now={voteinFavour} label={`${voteinFavour}% YES`}/>
           </ProgressBar>
 
           <Stack spacing={1} direction='row' align='center'>
             <Text>Vote: </Text>
-            <Button colorScheme='teal' size='sm'>
+            <Button colorScheme='teal' size='sm' onClick="this.disabled=true; this.value='Sending…';">
               Yes
             </Button>
             
-            <Button colorScheme='teal' size='sm'>
+            <Button colorScheme='teal' size='sm' onClick="this.disabled=true"> 
               No
             </Button>
           </Stack>
