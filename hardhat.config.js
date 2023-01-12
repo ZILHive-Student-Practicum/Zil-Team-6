@@ -3,8 +3,8 @@ require("dotenv").config();
 
 module.exports = {
   networks: {
-    hardhat: {
-      network_id: "*",
+    local: {
+      url: "http://localhost:8545",
     },
     zilliqa: {
       url: "https://evm-api-dev.zilliqa.com/",
