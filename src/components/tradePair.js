@@ -25,8 +25,8 @@ function DownArrow() {
     </Center>;
 };
 
-function AmountInput() {
-    return <NumberInput min={0} size="lg" flex="1" >
+function AmountInput({isDisabled}) {
+    return <NumberInput min={0} size="lg" flex="1" isDisabled={isDisabled}>
         <NumberInputField placeholder="0" textAlign="right"/>
     </NumberInput>
 }
@@ -38,10 +38,10 @@ function Panel({action, selectedTicker}) {
                 <FormLabel>{action === "buy" ? "PAY" : "SELL"}</FormLabel>
                 <InputGroup size="lg">
                     <InputLeftElement 
-                        children={action === "buy" ? "XSGD" : selectedTicker}
+                        children={action === "buy" ? "PRISM" : selectedTicker}
                         pointerEvents="none"
                         paddingLeft="5" />
-                    <AmountInput />
+                    <AmountInput isDisabled={action==="buy"}/>
                 </InputGroup>
             </FormControl>
             <DownArrow />
@@ -49,10 +49,10 @@ function Panel({action, selectedTicker}) {
                 <FormLabel>{action === "buy" ? "TO BUY" : "TO GET"}</FormLabel>
                 <InputGroup size="lg">
                     <InputLeftElement 
-                        children={action === "buy" ? selectedTicker : "XSGD"}
+                        children={action === "buy" ? selectedTicker : "PRISM"}
                         pointerEvents="none"
                         paddingLeft="5" />
-                    <AmountInput />
+                <AmountInput isDisabled={action !== "buy"}/>
                 </InputGroup>
             </FormControl>
             <Box h={8} />
