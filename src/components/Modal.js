@@ -16,7 +16,7 @@ function Modal({ setOpenModal }) {
             onClick={() => {
               setOpenModal(false);
             }}
-          >yarn start
+          >
             X
           </Button>
         </div>
@@ -27,25 +27,25 @@ function Modal({ setOpenModal }) {
         <div className="body">
           <form>
             <div>
-                <label>
-                    <div>Title</div>
-                    <input type="text" name="title"></input>
-                </label>
+                <div>Title</div>
+                <input type="text" name="title"></input>
 
-                <label>
-                    <div>Description</div>
-                    <textarea name="description"></textarea>
-                </label>
+                <div>Description</div>
+                <textarea name="description" cols="23"></textarea>
 
-                <label>
-                    <div>Information Link (optional)</div>
-                    <input type="text" name="informationLink" ></input>
-                </label>
+                <div>Information Link (optional)</div>
+                <input type="text" name="informationLink" ></input>
             </div>
           </form>
         </div>
+
         <div className="footer">
-          <Button>Submit</Button>
+          <Button onClick={() => {
+              setOpenModal(false);
+              alert("Poll submitted!")
+            }}>
+            Submit
+          </Button>
         </div>
       </div>
     </div>

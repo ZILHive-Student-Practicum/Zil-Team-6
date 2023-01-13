@@ -83,7 +83,7 @@ export default function AppBar() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            Prism
+            PRISM
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>

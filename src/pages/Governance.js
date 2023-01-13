@@ -16,7 +16,8 @@ const header = {
 
 const btn = {
     float: 'right',
-    marginTop: '20px'
+    marginTop: '20px',
+    marginBottom: '20px'
 }
 export default function Governance() {
 
@@ -33,7 +34,7 @@ export default function Governance() {
         <Container maxW="80%">
             <SimpleGrid minChildWidth="100%">
                 <header>
-                    <h1 style={header}>Govern</h1>
+                    <h1 style={header}>Governance</h1>
                     {/* <Button colorScheme='blue' variant='outline' style={btn}>
                         Create Poll
                     </Button> */}
