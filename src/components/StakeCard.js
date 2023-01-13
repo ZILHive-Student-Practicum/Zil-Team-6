@@ -23,7 +23,7 @@ export default function StakeCard() {
             <Box>
                 <Card height='190px'>
                     <CardHeader>
-                        <header style={header} size='md'>Prism</header>
+                        <header style={header} size='md'>PRISM</header>
                     </CardHeader>
                     <CardBody>
                         <SimpleGrid minChildWidth='150px'>
